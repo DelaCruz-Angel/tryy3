@@ -1,0 +1,225 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+}
+
+.container {
+  display: flex;
+  height: 100vh; 
+  width: 100vw; 
+}
+
+.left {
+  flex: 1;
+  background: url("./ICONS/rood.jpg"); 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  width: 130px;  
+  height: 130px;
+}
+
+.logo-text {
+  font-size: 2.8rem;  
+  font-weight: 700;
+}
+
+
+
+
+.right {
+  color: #286a31;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 40px;
+  background: #ffffff;
+  overflow: auto; 
+}
+
+
+    .welcome-text {
+      
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .sub-text {
+      font-size: 1rem;
+      color: #286a31;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border: 1px solid #286a31;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #ffffff;   /* <-- makes box white */
+  color: #000;           /* <-- makes text dark */
+}
+
+
+    .forgot-password {
+      font-size: 0.9rem;
+      color: #286a31;
+      text-align: right;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+   .login-btn {
+    align-items: center;
+      width: 100%;
+      padding: 12px;
+      background: #286a31;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .social-login {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  margin-bottom: 20px;
+}
+
+
+    .social-login img {
+      width: 45px;
+      cursor: pointer;
+    }
+
+    .signup-text {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #286a31;
+    }
+
+    .signup-text a {
+      color: #286a31;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+
+        .mobile-logo {
+  display: none; 
+}
+
+      @media (max-width: 900px) {
+
+  .welcome-text {
+    font-size: 1.5rem; 
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
+
+  .input-group label {
+    font-size: 0.85rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  .forgot-password {
+    font-size: 0.8rem;
+  }
+
+ .login-btn {
+    font-size: 0.9rem;
+  }
+
+  .signup-text {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+ 
+  .left {
+    display: none;
+  }
+
+ 
+@media (max-width: 900px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    display: none; 
+  }
+
+  .right {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+
+ 
+  .mobile-logo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+ .mobile-logo img {
+    width: 40px;  
+    height: 40px;
+}
+
+.mobile-logo span {
+    font-size: 1.4rem; 
+    font-weight: 500;
+}
+
+
+
+  .right::before {
+    display: none !important;
+    content: none;
+  }
+}
+
+}
