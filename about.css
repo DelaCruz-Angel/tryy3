@@ -1,0 +1,355 @@
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #b5b5b5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-family: "Gadugi", "Segoe UI", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  gap: 0px;
+}
+.logo-icon { width: 40px; height: 40px; border-radius: 8px; }
+
+
+nav { display: flex; gap: 18px; }
+.nav-links { display: flex; gap: 18px; }
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  padding: 12px 17px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: #3a8944; }
+
+
+.profile { display: flex; align-items: center; gap: 6px; }
+.profile img { width: 30px; height: 30px; border-radius: 50%; }
+
+
+.dropdown { position: relative; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.dropdown-arrow { font-size: 14px; color: #000; }
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  z-index: 20;
+}
+.dropdown-menu.show { display: flex; }
+.dropdown-item { padding: 12px; font-size: 14px; border-bottom: 1px solid #eee; color: #333; }
+.dropdown-item.logout { color: red; font-weight: bold; }
+
+.mobile-menu-button {
+  display: none; 
+}
+
+
+@media (max-width: 768px) {
+
+ 
+  .container {
+    padding: 30px 12px;
+    position: relative;
+  }
+
+
+.mobile-menu-button {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200; 
+    color: #286a31;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    z-index: 100; 
+}
+
+
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .profile {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 4px;
+    z-index: 1002;
+  }
+
+  .profile img {
+    width: 24px;
+    height: 24px;
+  }
+
+ 
+  .dropdown-menu {
+    top: 50px; 
+    right: 0;
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    z-index: 1200; 
+  }
+
+  .dropdown-menu.show { display: flex; }
+
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 220px;
+    height: 100vh;
+    background-color: #1e1e2f;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 10px;
+    transition: left 0.3s ease;
+    z-index: 2000;
+  }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+.nav-links.open {
+    left: 0;
+    z-index: 1100;
+}
+
+}
+
+
+  #mobileNav a {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  #mobileNav a:last-child {
+    border-bottom: none;
+  }
+
+
+  .main {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    margin-top: -41px;
+  }
+
+
+.hero-small {
+  background: url("https://i.pinimg.com/736x/c9/e1/1b/c9e11b3082969941717726f2863b71b8.jpg") no-repeat center center;
+  background-size: cover;
+  height: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.519);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+.about-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  color: #3a8944;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.features-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.features-section h2 {
+  font-size: 1.8rem;
+  color: #3a8944;
+  margin-bottom: 30px;
+}
+
+.features-container {
+  display: flex;
+  width: 100%;
+}
+
+.feature-box {
+  flex: 1;
+  background-color: #265d4073;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 0 10px;
+}
+
+.feature-box img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+.mission-section {
+  padding: 40px 0;
+}
+
+.mission-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mission-text {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.mission-text h2 {
+  font-size: 1.8rem;
+  color: #3a8944;
+  margin-bottom: 10px;
+}
+
+.mission-text p {
+  line-height: 1.6;
+}
+
+.mission-img {
+  flex: 1 1 300px;
+}
+
+.mission-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+.footer {
+  background: #3a8944;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+
+
+
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    line-height: 1.4;
+    word-wrap: break-word;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 1.5rem; }
+  .mission-container { flex-direction: column; }
+  .mission-img img { height: 200px; }
+  .features-container { flex-direction: column; }
+  .feature-box { margin: 10px 0; }
+  .team-members { flex-direction: column; align-items: center; }
+}

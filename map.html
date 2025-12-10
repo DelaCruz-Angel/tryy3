@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/map.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<title>SafeRouteManolo Map</title>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="#" class="logo">
+      <img src= /ICONS/newlogg.png class="logo-icon">
+      <span style="color: #3a8944; font-weight: 900;">Safe</span>RouteManolo
+    </a>
+
+
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <a href="/index.html">Home</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/map.html">Checkmap</a>
+        <a href="/about.html">About</a>
+        <a href="/contacts.html">Contact</a>
+      </div>
+  
+      <button class="mobile-menu-button" id="mobileBtn">☰</button>
+    </nav>
+
+ 
+    <div class="profile dropdown">
+      <img src="https://i.pinimg.com/736x/77/00/70/7700709ac1285b907c498a70fbccea5e.jpg">
+      <span class="dropdown-arrow">▼</span>
+      <div class="dropdown-menu">
+        <div class="dropdown-item" id="displayUsername">Full Name</div>
+        <div class="dropdown-item logout">Logout</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="map-info-container">
+  <div id="map"></div>
+  <div class="info-box" id="infoBox">
+    <div class="info-empty" id="infoEmpty">
+      <p><strong>Tap anywhere on the map</strong> to create a post at that location.</p>
+      <p class="small-muted">After tapping, fill title, description and upload images → Click Add Post.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="severity-legend-wrapper">
+  <h4 style="margin:0 0 6px 0; font-size:16px;">Severity</h4>
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+    <img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" style="width:24px; height:24px;">
+    <span style="font-size:15px; font-weight:600;">High</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px;">
+    <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" style="width:24px; height:24px;">
+    <span style="font-size:15px; font-weight:600;">Medium</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="https://maps.google.com/mapfiles/ms/icons/green-dot.png" style="width:24px; height:24px;">
+    <span style="font-size:15px; font-weight:600;">Low</span>
+  </div>
+</div>
+
+
+
+<div id="imagePopup">
+  <img src="" alt="Full Image" id="popupImg">
+</div>
+
+
+
+  <footer class="footer">
+    <p class="footer-bottom">&copy; 2025 SafeRouteManolo. All rights reserved.</p>
+  </footer>
+
+<script src="/map.js"></script>
+
+</body>
+</html>

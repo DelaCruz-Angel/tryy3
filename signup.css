@@ -1,0 +1,221 @@
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+ 
+    .left {
+      flex: 1;
+      background: url("./ICONS/rood.jpg");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-icon {
+      width: 130px;
+      height: 130px;
+    }
+
+    .logo-text {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+   
+    .right {
+        color: #286a31;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 40px 20px 40px;
+      background: #ffffff;
+      overflow: auto;
+      position: relative;
+    }
+
+    .welcome-text {
+        color: #286a31;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    .sub-text {
+      font-size: 1rem;
+      color: #286a31;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 5px;
+      border: 1px solid #286a31;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .input-group.small {
+      flex: 1;
+    }
+
+    .input-group.tiny {
+      width: 80px;
+    }
+
+    button.signup-btn {
+      width: 100%;
+      padding: 12px;
+      background: #286a31;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button.signup-btn:hover {
+      background: #0a441e;
+    }
+
+    .signin-text {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+      color: #286a31;
+    }
+
+    .signin-text a {
+      color: #286a31;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signin-text a:hover {
+      text-decoration: underline;
+    }
+
+
+    .password-group {
+      position: relative;
+    }
+    .password-group span.toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 69%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .mobile-logo {
+  display: none; 
+}
+
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left {
+        display: none;
+      }
+
+      .right {
+        width: 100%;
+        padding: 20px;
+        justify-content: flex-start;
+      }
+
+     
+      .mobile-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .mobile-logo img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .mobile-logo span {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+     
+      .welcome-text {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .sub-text {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .input-group label {
+        font-size: 0.85rem;
+      }
+
+      input {
+        font-size: 0.9rem;
+      }
+
+      .input-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .input-group.small,
+      .input-group.tiny {
+        width: 100%;
+      }
+
+      button.signup-btn {
+        font-size: 0.95rem;
+        padding: 10px;
+      }
+
+      .signin-text {
+        font-size: 0.85rem;
+      }
+    }
